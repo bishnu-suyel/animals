@@ -11,6 +11,7 @@ const CategoryPage = ({removeCard, removeLikes, addLikes, ...rest}) => {
   return (
     <>
       <h2>{category}</h2>
+      <h3></h3>
       {categoryItems.map((item)=>{
         return <Card 
         key = {item.name} 
