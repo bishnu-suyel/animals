@@ -6,20 +6,32 @@ This project is about the Zoo where the users can see the animals, birds and fis
 
 Built with:
 
-HTML
-JS
-CSS
-Reactjs
-...
-Setup and usage
-Live page here
+HTML  
 
-Screenshot
-Sources
-GitHub Guides - masterin markdown
+JS  
 
-Authors and acknowledgment
-Bishnu
+CSS  
+
+Reactjs   
+
+...   
+
+Setup and usage   
+
+Live page here  
+
+
+Screenshot  
+
+Sources  
+
+GitHub Guides - masterin markdown   
+
+
+Authors and acknowledgment  
+
+Bishnu  
+
 
 GitHub: @Bis10
 
