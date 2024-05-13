@@ -9,7 +9,6 @@ Built with:
 HTML
 JS
 CSS
-Bootstrap
 Reactjs
 ...
 Setup and usage
