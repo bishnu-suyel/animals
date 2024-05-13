@@ -18,7 +18,7 @@ Reactjs
 
 Setup and usage   
 
-Live page here  
+Live page: https://bis10.github.io/Animals/ 
 
 
 Screenshot  
