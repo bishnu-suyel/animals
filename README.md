@@ -1,8 +1,24 @@
-# React + Vite
+Project title
+This project is about the Zoo where the users can see the animals, birds and fishes based on what category they want to see.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Technologies used
+Built with:
 
-Currently, two official plugins are available:
+HTML
+JS
+CSS
+Bootstrap
+Reactjs
+...
+Setup and usage
+Live page here
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Screenshot
+Sources
+GitHub Guides - masterin markdown
+Make a README
+Authors and acknowledgment
+Bishnu 
+
+GitHub @Bis10
+LinkedIn linkedin.com/in/bishnu-suyel
