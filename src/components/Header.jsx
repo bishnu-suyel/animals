@@ -30,6 +30,10 @@ const Header = () => {
     </li>
   </ul>
 </nav>
+<div className="search-box">
+        <input type="text" placeholder="Search..." />
+        <button type="submit">Search</button>
+      </div>
 
     </header>
     
