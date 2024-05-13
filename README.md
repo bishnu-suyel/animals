@@ -20,5 +20,5 @@ Reactjs
 ## Authors and acknowledgment
 Bishnu 
 
-### GitHub @Bis10
-### LinkedIn linkedin.com/in/bishnu-suyel
+ GitHub: @Bis10
+LinkedIn: linkedin.com/in/bishnu-suyel
