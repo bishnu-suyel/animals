@@ -18,7 +18,6 @@ const SinglePage = ({ ...rest }) => {
         );
         setWikiInfo(response.data);
       } catch (error) {
-        console.error("Error fetching Wikipedia data:", error);
         setWikiInfo({ extract: "Information not available." });
       } finally {
         setLoading(false);
