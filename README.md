@@ -1,18 +1,18 @@
 # Project title
 
-This project is about the Zoo where the users can see the animals, birds and fishes based on what category they want to see.
+This project is about the Zoo where the users can find the creatures based on the categories. There are animals, birds and fishes.
 
 ## Technologies used
 
 Built with:
 
-HTML  
+- HTML  
 
-JS  
+- JS  
 
-CSS  
+- CSS  
 
-Reactjs   
+- Reactjs   
 
 ...   
 
@@ -20,19 +20,16 @@ Setup and usage
 
 Live page: https://bis10.github.io/Animals/ 
 
-
-Screenshot  
-
 Sources  
 
-GitHub Guides - masterin markdown   
-
+- [GitHub Guides - masterin markdown](https://guides.github.com/features/mastering-markdown/)
+- [Make a README](https://www.makeareadme.com/)
 
 Authors and acknowledgment  
 
 Bishnu  
 
 
-GitHub: @Bis10
+- GitHub: @Bis10
 
-LinkedIn: linkedin.com/in/bishnu-suyel
+- LinkedIn: linkedin.com/in/bishnu-suyel
