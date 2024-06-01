@@ -19,9 +19,7 @@ const SinglePage = ({ ...rest }) => {
         setWikiInfo(response.data);
       } catch (error) {
         setWikiInfo({ extract: "Information not available." });
-      } finally {
-        setLoading(false);
-      }
+      } 
     };
 
     fetchWikiInfo();
