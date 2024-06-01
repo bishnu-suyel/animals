@@ -1,0 +1,15 @@
+.card{
+    position: relative;
+}
+
+.btn-close{
+    position: absolute;
+    right: 10px;
+}
+
+
+.heart-btn:hover{
+    color: #aca1a1;
+    cursor: pointer;
+}
+
