@@ -9,7 +9,7 @@ const About = () => {
             <h1 className="mb-4">About This Project</h1>
 
             <section className="mb-5">
-              <h2>Information about the project</h2>
+              <h2>Description</h2>
               <p>
                 Welcome to my Zoo/Animals project! This website is made to give
                 you information on different creatures like Animals, Birds,
@@ -78,18 +78,25 @@ const About = () => {
                       state effectively.
                     </li>
                     <li>
-                      Learned hooks like useParams, useState and useEffect. Got to know about
-                      components Link and NavLink, and discovered nested routing
-                      with Outlet.
+                      Learned hooks like useParams, useState and useEffect. Got
+                      to know about components Link and NavLink, and discovered
+                      nested routing with Outlet.
                     </li>
-                    <li>Discovered how to fetch data through api using axios.</li>
+                    <li>
+                      Discovered how to fetch data through api using axios.
+                    </li>
                   </ul>
                 </li>
                 <li>
-                  <strong>User Experience Design:</strong> Focused on making
-                  navigation simple and accessible. Developed interactive
-                  features like likes, search functionality, and dynamic content
-                  display to make the site more engaging.
+                  <strong>User Experience Design:</strong>
+                  <ul>
+                    <li>
+                      Focused on making navigation simple and accessible.
+                      Developed interactive features like likes, search
+                      functionality, and dynamic content display to make the
+                      site more engaging.
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </section>
