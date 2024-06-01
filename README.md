@@ -1,6 +1,6 @@
-# Project title
+# Zoo/Animals
 
-This project is about the Zoo where the users can find the creatures based on the categories. There are animals, birds and fishes.
+This project is about the Zoo where the users can find the creatures based on the categories. Users find information about the different wildlife and pet creatures including animals, birds, insects and fishes.
 
 ## Technologies used
 
