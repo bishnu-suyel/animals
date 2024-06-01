@@ -1,5 +1,6 @@
 import React from 'react'
 import {useParams} from "react-router-dom";
+import axios from 'axios';
 
    const SinglePage = ({...rest}) => {
     const params = useParams();
