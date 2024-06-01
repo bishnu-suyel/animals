@@ -11,10 +11,10 @@ const About = () => {
             <section className="mb-5">
               <h2>Information about the project</h2>
               <p>
-                Welcome to our Zoo/Animals project! This website is made to give
+                Welcome to my Zoo/Animals project! This website is made to give
                 you information on different creatures like Animals, Birds,
-                Insects, and Fish. We aim to educate and entertain users with an
-                easy-to-use interface and fun features.
+                Insects, and Fish. I aim to educate and entertain users with an
+                easy-to-use interface and some great features.
               </p>
             </section>
 
@@ -78,10 +78,11 @@ const About = () => {
                       state effectively.
                     </li>
                     <li>
-                      Learned new hooks like useParams, got to know about
+                      Learned hooks like useParams, useState and useEffect. Got to know about
                       components Link and NavLink, and discovered nested routing
                       with Outlet.
                     </li>
+                    <li>Discovered how to fetch data through api using axios.</li>
                   </ul>
                 </li>
                 <li>
