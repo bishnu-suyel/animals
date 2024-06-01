@@ -1,42 +1,75 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import './css/header.css';
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+// import './css/header.css';
 
 const Header = () => {
   return (
     <header>
-      <Link>
-<h1>Zoo</h1>
-</Link>
-<nav>
-  <ul>
-    <li>
-      <NavLink to ="/">Home</NavLink>
-    </li>
-    <li>
-      <NavLink to ="/animals">Animals</NavLink>
-    </li>
-    <li>
-      <NavLink to ="/birds">Birds</NavLink>
-    </li>
-    <li>
-      <NavLink to ="/insects">Insects</NavLink>
-    </li>
-    <li>
-      <NavLink to ="/fishes">Fishes</NavLink>
-    </li>
-    <li>
-      <NavLink to ="/about">About</NavLink>
-    </li>
-  </ul>
-</nav>
-<div className="search-box">
-        <input type="text" placeholder="Search..." />
-        <button type="submit">Search</button>
-      </div>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">
+            Zoo
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <NavLink className="nav-link active" aria-current="page" to="/">
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/animals">
+                  Animals
+                </NavLink>
+              </li>
 
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/birds">
+                  Birds
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/insects">
+                  Insects
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/fishes">
+                  Fishes
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/about">
+                  About
+                </NavLink>
+              </li>
+            </ul>
+            <form className="d-flex" role="search">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button className="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
-    
   );
 };
 
