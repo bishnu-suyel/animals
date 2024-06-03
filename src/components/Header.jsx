@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
+import axios from "axios";
 // import './css/header.css';
 
 const Header = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.get(
+        `https://en.wikipedia.org/api/rest_v1/page/summary/${searchQuery}`
+      );
+      const { extract } = response.data; // Extract the 'extract' property from the response data
+      setSearchResults([extract]); // Set the 'extract' value in the state
+    } catch (error) {
+      console.error("Error fetching search results:", error);
+    }
+    setSearchQuery("");
+  };
+
+
+
   return (
     <header>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -55,22 +75,35 @@ const Header = () => {
                 </NavLink>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </header>
-  );
-};
+            <form className="d-flex" role="search" onSubmit={handleSearch}>
+  <input
+    className="form-control me-2"
+    type="search"
+    placeholder="Search"
+    aria-label="Search"
+    value={searchQuery}
+    onChange={(event) => setSearchQuery(event.target.value)}
+  />
+  <button className="btn btn-outline-success" type="submit">
+    Search
+  </button>
+</form>
+
+{/* Display the 'extract' property from the search results */}
+{searchResults.length > 0 && (
+  <div className="container mt-3">
+    <h3>Search Results</h3>
+    <h4>{searchResults.name}</h4>
+    <p>{searchResults[0]}</p> {/* Display the 'extract' value */}
+  </div>
+  )}
+  </div>
+  </div>
+  </nav>
+  </header>
+  )
+}
+
+
 
 export default Header;
