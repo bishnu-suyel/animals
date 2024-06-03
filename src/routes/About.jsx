@@ -1,74 +1,91 @@
 import React from "react";
 
+
 const About = () => {
   return (
     <>
       <div className="container mt-5">
         <div className="row justify-content-center">
           <div className="col-10 col-md-8">
-            <h1 className="mb-4">About This Project</h1>
+            <h1 className="mb-4 text-center">About This Project</h1>
 
-            <section className="mb-5">
-              <h2>Description</h2>
-              <p>
-                Welcome to my Zoo/Animals project! This website is made to give
+            <section className="mb-5 p-4">
+              <h2 className="mb-3">Description</h2>
+              <p className="fs-4">
+                Welcome to my Zoo/Animals project ! This website is made to give
                 you information on different creatures like Animals, Birds,
                 Insects, and Fish. I aim to educate and entertain users with an
                 easy-to-use interface and some great features.
               </p>
             </section>
 
-            <section className="mb-5">
-              <h2>Features Implemented</h2>
-              <ul>
-                <li>
-                  <strong>Navigation Links:</strong> Home, Animals, Birds,
-                  Insects, Fish, and About.
-                </li>
-                <li>
-                  <strong>Home Page:</strong> Shows four big images that link to
-                  the Animals, Birds, Insects, and Fish pages.
-                </li>
-                <li>
-                  <strong>Category Pages:</strong>
-                  <ul>
-                    <li>Each category page lists creatures as cards.</li>
-                    <li>
-                      Search Feature: Search for specific creatures by name
-                      within each category.
-                    </li>
-                    <li>
-                      Creature Cards: Each card shows the creature's name and
-                      image, and includes:
-                      <ul>
-                        <li>Add/Remove Likes: Like or unlike a creature.</li>
-                        <li>Remove Card: Remove the creature's card.</li>
-                        <li>
-                          See More Button: Opens the detailed page for that
-                          creature.
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>Single Creature Page:</strong> Shows detailed
-                  information about the selected creature. Includes a "Back to
-                  Previous Page" button for easy navigation.
-                </li>
-                <li>
-                  <strong>About Page:</strong> This page includes information
-                  about the project and features implemented.
-                </li>
-              </ul>
+            <section className="mb-5 border border-success border-2 p-4 ms-0">
+              <h2 className="mb-3">Features Implemented</h2>
+              <div className="container">
+                <div className="row">
+                  <div className="col">
+                    <strong>Navigation Links:</strong>
+                  </div>
+                  <div className="col">
+                    Home, Animals, Birds, Insects, Fish, and About.
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col">
+                    <strong>Home Page:</strong>
+                  </div>
+                  <div className="col">
+                    Shows four big images that link to the Animals, Birds,
+                    Insects, and Fish pages.
+                  </div>
+                </div>
+
+                <div className="row">
+                  <div className="col">
+                    <strong>Creature Cards:</strong>
+                  </div>
+                  <div className="col">
+                    <ul>
+                      Each card shows the creature's name and image, and
+                      includes:
+                      <li>Add/Remove Likes: Like or unlike a creature.</li>
+                      <li>Remove Card: Remove the creature's card.</li>
+                      <li>
+                        See More Button: Opens the detailed page for that
+                        creature.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="row">
+                  <div className="col">
+                    <strong>Single Creature Page:</strong>
+                  </div>
+                  <div className="col">
+                    Shows detailed information about the selected creature.
+                    Includes a "Back to Previous Page" button for easy
+                    navigation.
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col">
+                    <strong>About Page:</strong>
+                  </div>
+                  <div className="col">
+                    This page includes information about the project and
+                    features implemented.
+                  </div>
+                </div>
+              </div>
             </section>
 
-            <section className="mb-5">
-              <h2>What I Learned</h2>
-              <ul>
+            <section className="mb-5 p-4">
+              <h2 className="mb-3">What I Learned</h2>
+              <ul className="list-unstyled">
                 <li>
                   <strong>Web Development Fundamentals:</strong>
-                  <ul>
+                  <ul className="list-unstyled">
                     <li>
                       Improved my skills in HTML, CSS, and JavaScript to make a
                       responsive and user-friendly interface.
@@ -78,18 +95,21 @@ const About = () => {
                       state effectively.
                     </li>
                     <li>
-                      Learned hooks like useParams, useState and useEffect. Got
-                      to know about components Link and NavLink, and discovered
-                      nested routing with Outlet.
+                      Learned hooks like <code>useParams</code>,{" "}
+                      <code>useState</code>, and <code>useEffect</code>. Got to
+                      know about components <code>Link</code> and{" "}
+                      <code>NavLink</code>, and discovered nested routing with{" "}
+                      <code>Outlet</code>.
                     </li>
                     <li>
-                      Discovered how to fetch data through api using axios.
+                      Discovered how to fetch data through API using{" "}
+                      <code>axios</code>.
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li className="mt-2">
                   <strong>User Experience Design:</strong>
-                  <ul>
+                  <ul className="list-unstyled">
                     <li>
                       Focused on making navigation simple and accessible.
                       Developed interactive features like likes, search
