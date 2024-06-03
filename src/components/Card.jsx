@@ -1,59 +1,55 @@
 import React from "react";
-// import './css/card.css';
 import { Link } from "react-router-dom";
 import "./css/main.css";
 
 const Card = ({ name, likes, addLikes, removeCard, removeLikes }) => {
   return (
-    <>
-      <div className="card col-3">
+    <div className="col-3 d-flex justify-content-center mb-4 mx-md-4">
+      <div className="card border border-success border-2">
         <button
           type="button"
           className="btn-close"
           aria-label="Close"
           onClick={removeCard}
         ></button>
-
-        <img
-          src={`https://source.unsplash.com/400x400/?${name}`}
-          className="card-img-top"
-          alt="..."
-        />
+        <div className="d-flex justify-content-center">
+          <img
+            src={`https://source.unsplash.com/600x600/?${name}`}
+            className="card-img-top"
+            alt="..."
+          />
+        </div>
         <div className="card-body">
-          <h5 className="card-title text-capitalize">{name}</h5>
+          <h5 className="card-title text-capitalize text-center">{name}</h5>
           <div className="card-text">
-            <div className=" row">
+            <div className="row">
               <span
-                className="material-symbols-outlined heart-btn col"
+                className="material-symbols-outlined col text-success"
                 onClick={addLikes}
               >
                 heart_plus
               </span>
-              <div className="col">
-                <span className="material-symbols-outlined">
+              <div className="col text-center">
+                <span className="material-symbols-outlined text-danger">
                   favorite
                   <span className="fs-6">{likes}</span>
                 </span>
               </div>
 
               <span
-                className="heart-btn material-symbols-outlined col"
+                className="material-symbols-outlined col text-gray"
                 onClick={removeLikes}
               >
                 heart_minus
               </span>
             </div>
           </div>
-          <Link
-            className="btn btn-prima
-        ery"
-            to={name}
-          >
+          <Link className="btn btn-primary w-100" to={name}>
             See more
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
