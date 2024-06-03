@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Footer from "../components/Footer";
 import axios from "axios";
 
 const SinglePage = ({ ...rest }) => {
