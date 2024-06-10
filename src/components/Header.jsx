@@ -1,27 +1,49 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import axios from "axios";
-// import './css/header.css';
+import { animals, birds, fishes, insects } from "../animalsList";
+import Card from "./Card"; // Import the Card component
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
-  const handleSearch = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await axios.get(
-        `https://en.wikipedia.org/api/rest_v1/page/summary/${searchQuery}`
+  useEffect(() => {
+    if (searchQuery.length > 0) {
+      const allCreatures = [...animals, ...birds, ...fishes, ...insects];
+      const filteredResults = allCreatures.filter((creature) =>
+        creature.name.toLowerCase().startsWith(searchQuery.toLowerCase())
       );
-      const { extract } = response.data; // Extract the 'extract' property from the response data
-      setSearchResults([extract]); // Set the 'extract' value in the state
-    } catch (error) {
-      console.error("Error fetching search results:", error);
+      setSearchResults(filteredResults);
+    } else {
+      setSearchResults([]);
     }
-    setSearchQuery("");
+  }, [searchQuery]);
+
+  const addLikes = (name) => {
+    setSearchResults((prevResults) =>
+      prevResults.map((creature) =>
+        creature.name === name
+          ? { ...creature, likes: creature.likes + 1 }
+          : creature
+      )
+    );
   };
 
+  const removeLikes = (name) => {
+    setSearchResults((prevResults) =>
+      prevResults.map((creature) =>
+        creature.name === name && creature.likes > 0
+          ? { ...creature, likes: creature.likes - 1 }
+          : creature
+      )
+    );
+  };
 
+  const removeCard = (name) => {
+    setSearchResults((prevResults) =>
+      prevResults.filter((creature) => creature.name !== name)
+    );
+  };
 
   return (
     <header>
@@ -53,7 +75,6 @@ const Header = () => {
                   Animals
                 </NavLink>
               </li>
-
               <li className="nav-item">
                 <NavLink className="nav-link" to="/birds">
                   Birds
@@ -75,35 +96,40 @@ const Header = () => {
                 </NavLink>
               </li>
             </ul>
-            <form className="d-flex" role="search" onSubmit={handleSearch}>
-  <input
-    className="form-control me-2"
-    type="search"
-    placeholder="Search"
-    aria-label="Search"
-    value={searchQuery}
-    onChange={(event) => setSearchQuery(event.target.value)}
-  />
-  <button className="btn btn-outline-success" type="submit">
-    Search
-  </button>
-</form>
+            <div className="d-flex">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
 
-{/* Display the 'extract' property from the search results */}
-{searchResults.length > 0 && (
-  <div className="container mt-3">
-    <h3>Search Results</h3>
-    <h4>{searchResults.name}</h4>
-    <p>{searchResults[0]}</p> {/* Display the 'extract' value */}
-  </div>
-  )}
-  </div>
-  </div>
-  </nav>
-  </header>
-  )
-}
-
-
+      {/* Display the search results */}
+      {searchResults.length > 0 && (
+        <div className="container mt-3">
+          <h3>Search Results</h3>
+          <div className="row">
+            {searchResults.map((creature, index) => (
+              <Card
+                key={index}
+                name={creature.name}
+                likes={creature.likes}
+                addLikes={() => addLikes(creature.name)}
+                removeLikes={() => removeLikes(creature.name)}
+                removeCard={() => removeCard(creature.name)}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};
 
 export default Header;
