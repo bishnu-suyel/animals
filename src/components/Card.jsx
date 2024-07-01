@@ -16,7 +16,7 @@ const Card = ({ name, likes, addLikes, removeCard, removeLikes }) => {
           <img
             src={`https://source.unsplash.com/600x600/?${name}`}
             className="card-img-top"
-            alt="..."
+            alt={name}
           />
         </div>
         <div className="card-body">
@@ -24,7 +24,7 @@ const Card = ({ name, likes, addLikes, removeCard, removeLikes }) => {
           <div className="card-text">
             <div className="row">
               <span
-                className="material-symbols-outlined col text-success"
+                className="material-symbols-outlined col text-success cursor-pointer"
                 onClick={addLikes}
               >
                 heart_plus
@@ -37,14 +37,14 @@ const Card = ({ name, likes, addLikes, removeCard, removeLikes }) => {
               </div>
 
               <span
-                className="material-symbols-outlined col text-gray"
+                className="material-symbols-outlined col text-gray cursor-pointer"
                 onClick={removeLikes}
               >
                 heart_minus
               </span>
             </div>
           </div>
-          <Link className="btn btn-primary w-100" to={name}>
+          <Link className="btn btn-primary w-100 cursor-pointer" to={name}>
             See more
           </Link>
         </div>
