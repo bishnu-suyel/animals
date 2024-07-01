@@ -1,50 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { animals, birds, fishes, insects } from "../animalsList";
-import Card from "./Card"; // Import the Card component
 
 const Header = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
-
-  useEffect(() => {
-    if (searchQuery.length > 0) {
-      const allCreatures = [...animals, ...birds, ...fishes, ...insects];
-      const filteredResults = allCreatures.filter((creature) =>
-        creature.name.toLowerCase().startsWith(searchQuery.toLowerCase())
-      );
-      setSearchResults(filteredResults);
-    } else {
-      setSearchResults([]);
-    }
-  }, [searchQuery]);
-
-  const addLikes = (name) => {
-    setSearchResults((prevResults) =>
-      prevResults.map((creature) =>
-        creature.name === name
-          ? { ...creature, likes: creature.likes + 1 }
-          : creature
-      )
-    );
-  };
-
-  const removeLikes = (name) => {
-    setSearchResults((prevResults) =>
-      prevResults.map((creature) =>
-        creature.name === name && creature.likes > 0
-          ? { ...creature, likes: creature.likes - 1 }
-          : creature
-      )
-    );
-  };
-
-  const removeCard = (name) => {
-    setSearchResults((prevResults) =>
-      prevResults.filter((creature) => creature.name !== name)
-    );
-  };
-
   return (
     <header>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -96,38 +53,9 @@ const Header = () => {
                 </NavLink>
               </li>
             </ul>
-            <div className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                value={searchQuery}
-                onChange={(event) => setSearchQuery(event.target.value)}
-              />
-            </div>
           </div>
         </div>
       </nav>
-
-      {/* Display the search results */}
-      {searchResults.length > 0 && (
-        <div className="container mt-3">
-          <h3>Search Results</h3>
-          <div className="row">
-            {searchResults.map((creature, index) => (
-              <Card
-                key={index}
-                name={creature.name}
-                likes={creature.likes}
-                addLikes={() => addLikes(creature.name)}
-                removeLikes={() => removeLikes(creature.name)}
-                removeCard={() => removeCard(creature.name)}
-              />
-            ))}
-          </div>
-        </div>
-      )}
     </header>
   );
 };
