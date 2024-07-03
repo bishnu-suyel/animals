@@ -26,7 +26,7 @@ Live page: https://ornate-lily-428df6.netlify.app/
 - [Make a README](https://www.makeareadme.com/)
 
 ## Acknowledgement  
-Margit Tennosar
+Margit Tennosaar
 
 ## Author
 
