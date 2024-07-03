@@ -8,7 +8,7 @@ const Card = ({ name, likes, addLikes, removeCard, removeLikes }) => {
       <div className="card border border-success border-2">
         <button
           type="button"
-          className="btn-close"
+          className="btn btn-danger btn-close"
           aria-label="Close"
           onClick={removeCard}
         ></button>
