@@ -16,16 +16,19 @@ Built with:
 
 ...   
 
-Setup and usage   
+## Setup and usage   
 
 Live page: https://bis10.github.io/Animals/ 
 
-Sources  
+## Sources  
 
 - [GitHub Guides - masterin markdown](https://guides.github.com/features/mastering-markdown/)
 - [Make a README](https://www.makeareadme.com/)
 
-Authors and acknowledgment  
+## Acknowledgement  
+Margit Tennosar
+
+## Author
 
 Bishnu  
 
