@@ -18,7 +18,7 @@ Built with:
 
 ## Setup and usage   
 
-Live page: https://ornate-lily-428df6.netlify.app/animals
+Live page: https://ornate-lily-428df6.netlify.app/
 
 ## Sources  
 
