@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const SinglePage = ({ ...rest }) => {
   const params = useParams();
+  const navigate = useNavigate();
 
   const categoryItems = rest[params.category];
-
   const data = categoryItems.find((el) => el.name === params.name);
   const [wikiInfo, setWikiInfo] = useState({});
 
@@ -19,11 +19,16 @@ const SinglePage = ({ ...rest }) => {
         setWikiInfo(response.data);
       } catch (error) {
         setWikiInfo({ extract: "Information not available." });
-      } 
+      }
     };
 
     fetchWikiInfo();
   }, [data.name]);
+
+  const handleBackClick = () => {
+    navigate(-1);
+  };
+
   return (
     <>
       <div className="container mt-5 px-5">
@@ -39,8 +44,12 @@ const SinglePage = ({ ...rest }) => {
             Read more on Wikipedia
           </a>
         </div>
+        <button onClick={handleBackClick} className="btn btn-primary mt-4">
+          Back to Main Page
+        </button>
       </div>
     </>
   );
 };
+
 export default SinglePage;
