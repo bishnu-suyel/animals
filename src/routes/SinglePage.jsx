@@ -45,7 +45,7 @@ const SinglePage = ({ ...rest }) => {
           </a>
         </div>
         <button onClick={handleBackClick} className="btn btn-primary mt-4">
-          Back to Main Page
+          Back to Previous Page
         </button>
       </div>
     </>
