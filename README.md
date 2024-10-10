@@ -29,7 +29,7 @@ Live page: https://ornate-lily-428df6.netlify.app/
 - [React Documentation](https://react.dev/learn)
 
 ## Acknowledgement  
-Margit Tennosaar
+- [Margit Tennosaar](https://github.com/margittennosaar)
 
 ## Author
 - [GitHub @bishnu-suyel](https://github.com/bishnu-suyel)
