@@ -1,6 +1,6 @@
 # Zoo/Animals
 
-This project is about the Zoo where the users can find the creatures based on the categories. Users find information about the different wildlife and pet creatures including animals, birds, insects and fishes.They can increase the likes or decrease it with the plus heart and minus heart symbol. They can also search the name of the creatures or removed the card of the creatures with the cross symbol on the top right.
+This is a reactjs project about the Zoo where the users can find the creatures based on the categories. Users find information about the different wildlife and pet creatures including animals, birds, insects and fishes.They can increase the likes or decrease it with the plus heart and minus heart symbol. They can also search the name of the creatures or removed the card of the creatures with the cross symbol on the top right.
 
 ## Technologies used
 
@@ -24,15 +24,11 @@ Live page: https://ornate-lily-428df6.netlify.app/
 
 - [GitHub Guides - masterin markdown](https://guides.github.com/features/mastering-markdown/)
 - [Make a README](https://www.makeareadme.com/)
+- [React Documentation](https://react.dev/learn)
 
 ## Acknowledgement  
 Margit Tennosaar
 
 ## Author
-
-Bishnu  
-
-
-- GitHub: @Bis10
-
-- LinkedIn: linkedin.com/in/bishnu-suyel
+- [GitHub @bishnu-suyel](https://github.com/bishnu-suyel)
+- [LinkedIn @bishnu-suyel](https://www.linkedin.com/in/bishnu-suyel)
