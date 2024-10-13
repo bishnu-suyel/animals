@@ -22,6 +22,17 @@ Built with:
 
 Live page: https://ornate-lily-428df6.netlify.app/
 
+### Screenshot
+Here are some screenshots of the application:
+
+| Home Page            | Animals Page                |
+|--------------------------|--------------------------|
+| ![Home Page](src/assets/home.png) | ![Animals Page](src/assets/animals.png) |
+
+| Fishes Page           | About Page      |
+|--------------------------|--------------------------|
+| ![Fishes page](src/assets/fishes.png) | ![About Page](src/assets/about.png) |
+
 ## Sources  
 
 - [GitHub Guides - masterin markdown](https://guides.github.com/features/mastering-markdown/)
