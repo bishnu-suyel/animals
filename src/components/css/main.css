@@ -1,18 +1,84 @@
-.card{
-    position: relative;
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.btn-close{
+.card {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border: 2px solid #28a745;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.btn-close {
     position: absolute;
     right: 10px;
-}
-
-
-.heart-btn:hover{
-    color: #aca1a1;
+    top: 10px;
+    z-index: 1;
+    background: transparent;
+    border: none;
     cursor: pointer;
 }
 
-.cursor-pointer {
-  cursor: pointer;
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.fixed-size-image {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.likes-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.material-symbols-outlined {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
 }
