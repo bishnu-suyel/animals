@@ -67,7 +67,7 @@ Built with:
 
 Live page: https://ornate-lily-428df6.netlify.app/
 
-### Screenshot
+## Screenshot
 Here are some screenshots of the application:
 
 | Home Page            | Animals Page                |
