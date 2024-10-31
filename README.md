@@ -65,7 +65,7 @@ Built with:
 
 ## Live Page   
 
-Live page: https://ornate-lily-428df6.netlify.app/
+Live page: https://digitalzoopark.netlify.app/
 
 ## Screenshot
 Here are some screenshots of the application:
